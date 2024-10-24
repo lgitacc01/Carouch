@@ -111,7 +111,7 @@ while running:
         #BMW
         bmw=BMW.BMW()
         bmwr=BMW.BMW_rect(bmw)
-        BMW.spam_BMW(bmw,diem,char.x)
+        BMW.spam_BMW(diem,char.x)
         screen.blit(bmw,bmwr)
         
         #vacham

@@ -34,12 +34,10 @@ def BMW_run():
    
     return y
 
-def spam_BMW(BMW,diem,charx):
+def spam_BMW(diem,charx):
     global x
     global dung
     global y
-    if y<0:
-        x=charx
     if int(diem)%5==0 and dung==0 and diem>5:
         BMW_run()
     else: x=charx
