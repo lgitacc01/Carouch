@@ -1,7 +1,6 @@
 import pygame
 import random
 import os
-clock=pygame.time.Clock()
 current_dir = os.path.dirname(os.path.abspath(__file__))
 BMW_path = os.path.join(current_dir, 'picture', 'BMW.png')
 x=300
@@ -36,11 +35,9 @@ def BMW_run():
     return y
 
 def spam_BMW(BMW,diem,charx):
-    listx=[420,300,540]
     global x
     global dung
     global y
-    global spam
     if y<0:
         x=charx
     if int(diem)%5==0 and dung==0 and diem>5:

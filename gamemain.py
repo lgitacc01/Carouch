@@ -8,19 +8,18 @@ import os
 
 
 #variable
-i=0
 diem_cu=0
 ten_cu=''
 RED=(255,0,0)
 WHITE=(255,255,255)
 xChar_cu=0
+diem=0
 #innit
 pygame.init()
 current_dir = os.path.dirname(os.path.abspath(__file__))
 maintruck_path = os.path.join(current_dir, 'picture', 'maintruck.png')
 background_path = os.path.join(current_dir, 'picture', 'background.png')
 clock=pygame.time.Clock()
-diem=0
 font=pygame.font.Font(None, 36)
 pygame.mixer.music.load(r'audio\videogamemusic.mp3')
 tong_xe=pygame.mixer.Sound(r'audio\tongxe.mp3')
@@ -95,8 +94,6 @@ while running:
             char.turn(event)
             name=menu.read_name(event)
     if gameplay:
-        
-        #pygame.mixer.music.pause()
         screen.blit(bg,(0,bg_y))
         bg_y=bg_y+1
         screen.blit(bg,(0,bg_y))
@@ -125,10 +122,7 @@ while running:
                 ten_cu=name
             diem=0
             cetruck.respawn()
-            #BMW.respawn()
             BMW.y=0
-            print ("die")
-            print (BMW.x,BMW.y)
             pygame.mixer.music.pause()
             tong_xe.play()
             pygame.time.delay(2300)
@@ -139,8 +133,6 @@ while running:
             bg_y=0    
         clock.tick(50)
         diem+=0.01
-        if diem%5!=0:
-             i=0
         hien_thi_diem()
         hien_thi_ten(name)
         if diem_cu>0:

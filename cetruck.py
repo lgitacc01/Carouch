@@ -17,7 +17,6 @@ def ct_rect(char):
 def ctRun():    
     global y
     global v
-    print (v)
     if y<= 800:
         y=y+v
         return y
